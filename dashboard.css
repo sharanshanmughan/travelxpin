@@ -1,0 +1,537 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.topBar{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    padding: 10px;
+}
+
+.logoContainer{
+   flex: .4;
+   
+    
+}
+
+.menuContainer{
+    display: flex;
+    flex: 1.6;
+    justify-content: center;
+    
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin-right: 30px;
+}
+
+.menu ul li a {
+    color:#042331;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+.balanceContainer{
+    flex: 1;
+    
+}
+
+.balance-info {
+    display: flex;
+}
+
+.balance-info div {
+    margin-left: 20px;
+}
+
+.od-balance{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.retailer-balance{
+	display: flex;
+	
+	flex-direction:column;
+	align-items:flex-end;
+	flex-grow: 1;
+}
+
+.retailer-balance-info{
+	display: flex;
+	flex-direction: row;
+	align-items:flex-end;
+	
+	
+}
+
+.balance-info span {
+    font-size: 14px;
+    color: #333;
+}
+
+.balance-amount {
+    font-size: 16px;
+    color: red; /* Red color for the balance amounts */
+    font-weight: bold;
+}
+
+.eye-icon {
+    width: 16px;
+	height:16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+.logo{
+    height: 24px;
+   
+}
+
+
+ 	
+
+.sidebar {
+    position: fixed;
+    flex-direction: column;
+    left: -250px;
+    width: 100px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+    top: 84px;
+
+}
+
+.sidebar header{
+    width: 100%;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+  
+}
+
+.sidebar ul a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+.iconSize{
+    font-size: 25px;
+   
+}
+.menuLabelSize{
+    font-size: 14px;
+}
+
+.sidebar ul li:hover a{
+    background: linear-gradient(90deg, rgba(52,48,122,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    transform: scale(1.03);
+}
+
+#check{
+    display: none;
+}
+
+label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+
+label #btn:hover, label #cancel:hover{
+    background: linear-gradient(90deg, rgba(52,48,122,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    
+}
+
+label #btn{
+    left: 30px;
+    top: 88px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 12px;
+    
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -151px;
+    top: 88px;
+    color: wheat;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 105px;
+}
+
+
+
+.container{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+}
+
+.topTab{
+    width: 100%;
+    height: 50px; 
+    padding: 0px 20px;
+    background: #042331;
+    display: flex;
+}
+
+.sidebarContainer{
+    flex: .3;
+   
+}
+.moneyContainer{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+     flex: 1.7;
+    
+    
+}
+
+.navbar ul {
+    display: flex;
+    background: #042331;
+    align-self: center;
+    list-style-type: none;
+	flex-direction: row;
+	
+}
+
+.navbar ul li {
+    margin-right: 40px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #deccff; /* Lighten color on hover */
+	background:#02111f;
+}
+
+.accountContainer{
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    
+}
+
+.welcome-info {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-info span {
+    margin-right: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.user-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+
+.banner {
+    background-color: orange;
+    text-align: center;
+    padding: 0px 0;
+    position: absolute;
+	width:100%;
+	height: 80%;
+}
+
+.banner img {
+    width: 100%;
+    
+}
+
+.banner-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.banner-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner-text h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+footer {
+	position: absolute;
+	width:100%;
+    bottom: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.contact-info span {
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.contact-info span:hover {
+    color: #e43b3b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Social Media Icons in Footer */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+/*right side menu*/
+
+.mySidenav  {
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  display:flex;
+  flex-direction: column;
+  width: 150px;
+  height:300px;
+ 
+}
+
+.mySidenav a{
+	padding: 15px;
+	text-decoration: none;
+	font-size: 20px;
+	color:rgb(0, 0, 0);
+	flex:.7;
+}
+
+.sideLabel{
+    font-size: 12px;
+}
+
+
+
+.about {
+  position:absolute;
+  top: 20px;
+  background-color: #dfdfdf;
+  border-radius: 5px 0px 0px 5px;
+  width:100%;
+  height:50px;
+  right:-110px;
+  transition: 0.3s;
+}
+
+.about:hover {
+  right:0px
+}
+
+.blog {
+  position:absolute;
+  top: 80px;
+  background-color: #ffffff;
+  border-radius: 5px 0px 0px 5px;
+  width:100%;
+  height:50px;
+  right:-110px;
+  transition: 0.3s;
+}
+
+.blog:hover {
+  right:0px
+}
+
+.projects {
+  position:absolute;
+  top: 140px;
+  background-color: #ffffff;
+  border-radius: 5px 0px 0px 5px;
+  width:100%;
+  height:50px;
+  right:-110px;
+  transition: 0.3s;
+}
+
+.projects:hover {
+  right:0px
+}
+
+.contact {
+  position:absolute;
+  top: 200px;
+  background-color: #ffffff;
+  border-radius: 5px 0px 0px 5px;
+  width:100%;
+  height:50px;
+  right:-110px;
+  transition: 0.3s;
+}
+
+.contact:hover {
+  right:0px
+}
+
+.download {
+  position:absolute;
+  top: 260px;
+  background-color: #ffffff;
+  border-radius: 5px 0px 0px 5px;
+  width:100%;
+  height:50px;
+  right:-110px;
+  transition: 0.3s;
+}
+
+.download:hover {
+  right:0px
+}
+
+.logo{
+	align-self: center;
+	flex:.3;
+	color:rgb(0, 0, 0);
+}
+
+.buttonContainer {
+	
+	display:flex;
+	justify-content:center;
+	padding-left:15px
+}
+
+.buttonContainer a{
+    font-size: 14px;
+}
+
+.dropbtn {
+
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: auto;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+  border-radius:30px;
+}
+

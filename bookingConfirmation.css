@@ -1,0 +1,637 @@
+ody {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+.headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    /* Background to cover any underlying elements */
+    z-index: 1000;
+    /* Ensures it stays above other elements */
+    box-shadow: 0px 4px 2px -2px gray;
+    /* Optional: add a shadow for effect */
+    
+}
+
+.topBar {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    padding: 10px;
+}
+
+.logoContainer {
+    flex: .4;
+
+
+}
+
+.menuContainer {
+    display: flex;
+    flex: 1.6;
+    justify-content: center;
+
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin-right: 30px;
+}
+
+.menu ul li a {
+    color: #042331;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+.balanceContainer {
+    flex: 1;
+
+}
+
+.balance-info {
+    display: flex;
+}
+
+.balance-info div {
+    margin-left: 20px;
+}
+
+.od-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.retailer-balance {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.retailer-balance-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+
+}
+
+.balance-info span {
+    font-size: 14px;
+    color: #333;
+}
+
+.balance-amount {
+    font-size: 16px;
+    color: red;
+    /* Red color for the balance amounts */
+    font-weight: bold;
+}
+
+.eye-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+.logo {
+    height: 24px;
+
+}
+
+
+
+
+.sidebar {
+    position: fixed;
+    z-index: 1000;
+    flex-direction: column;
+    left: -250px;
+    width: 100px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+    top: 84px;
+
+}
+
+.sidebar header {
+    width: 100%;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+
+}
+
+
+.sidebar ul a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+
+
+
+.iconSize {
+    font-size: 28px;
+
+}
+
+.menuLabelSize {
+    font-size: 14px;
+}
+
+.sidebar ul li:hover a {
+    background: linear-gradient(90deg, rgba(52, 48, 122, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    transform: scale(1.03);
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+
+label #btn:hover,
+label #cancel:hover {
+    background: linear-gradient(90deg, rgba(52, 48, 122, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+
+}
+
+label #btn {
+    position: fixed;
+    z-index: 1000;
+    left: 30px;
+    top: 88px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 12px;
+
+}
+
+label #cancel {
+    position: fixed;
+    z-index: 1111;
+    left: -151px;
+    top: 88px;
+    color: rgb(201, 179, 245);
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+#check:checked~label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked~label #cancel {
+    left: 105px;
+}
+
+
+
+.container {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.topTab {
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    background: #042331;
+    display: flex;
+}
+
+.sidebarContainer {
+    flex: .3;
+
+}
+
+.moneyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1.7;
+
+
+}
+
+.navbar ul {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    list-style-type: none;
+    flex-direction: row;
+
+
+}
+
+.navbar ul li {
+    margin-right: 40px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #deccff;
+    /* Lighten color on hover */
+    background: #172b3d;
+}
+
+.accountContainer {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+
+}
+
+.welcome-info {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-info span {
+    margin-right: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.user-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.dropbtn {
+
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: auto;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    border-radius: 30px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+.journey-details-container {
+    width: 100%;
+    flex: .7;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.journey-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.flight-details {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-item {
+   
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.flight-segment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.airline-info, .departure-info, .duration, .arrival-info, .fare-rule, .baggage-info {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.fare-rule a, .baggage-info a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.layover-time {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fde4e4;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.fill-retailer {
+    margin-top: 10px;
+}
+
+.fare-summary {
+    float: right;
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fare-details {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.total-cost, .ticket-cost {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.cost {
+    color: red;
+    font-weight: bold;
+}
+
+.passenger-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.action-btn {
+    background-color: #ccc;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.passenger-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.adult-details label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group select,
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.add-btn {
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gst-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gst-details a {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.gst-details label {
+    font-weight: bold;
+}
+
+.payment-details-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.payment-info .amount {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.payment-method select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hold {
+    background-color: #dcdcdc;
+    border: 1px solid #ccc;
+}
+
+.back {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+}
+
+.book {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}

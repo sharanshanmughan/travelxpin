@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>TravelXpin</title>
+	<link rel="stylesheet" href="bookingConfirmation.css">
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+
+	<div class="container">
+		<div class="headerContainer">
+			<div class="topBar">
+				<div class="logoContainer">
+					<div class="logoContainer">
+						<a href="dashboard.html">
+							<img class="logo"
+							src="data:image/png;base64,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"
+							alt="logo" />
+						</a>
+						
+					</div>
+				</div>
+				<div class="menuContainer">
+					<nav class="menu">
+						<ul>
+							<li><a href="#">Banking / Topup</a></li>
+							<li><a href="#">Retailer</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="balanceContainer">
+
+					<div class="balance-info">
+						<div class="od-balance">
+							<span>OD Balance:</span>
+							<span class="balance-amount">₹1,133,804.41</span>
+						</div>
+						<div class="retailer-balance">
+							<span>Retailer Balance:</span>
+							<div class="retailer-balance-info">
+								<span class="balance-amount">₹33,804.41</span>
+								<img class="eye-icon" src="https://cdn-icons-png.flaticon.com/512/6423/6423886.png"
+									alt="Eye Icon">
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="topTab">
+				<div class="sidebarContainer"></div>
+				<div class="moneyContainer">
+					<nav class="navbar">
+						<ul>
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Transactions</a></li>
+							<li><a href="#">Imoprt PNR</a></li>
+							<li><a href="#">Reports</a></li>
+							<li><a href="#">Group Banking</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="accountContainer">
+					<div class="welcome-info">
+						<span>Welcome TRAVELEXPIN LLP [1316238482769]</span>
+						<div class="dropdown" style="float:right;">
+							<div class="dropbtn">
+								<img class="user-icon" src="https://cdn-icons-png.flaticon.com/256/306/306205.png"
+									alt="User Icon">
+							</div>
+							<div class="dropdown-content">
+								<a href="#">Link 1</a>
+								<a href="#">Link 2</a>
+								<a href="#">Link 3</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+        <div style="display: flex; flex-direction: row; position: relative;top: 150px;">
+            <div class="journey-details-container">
+                <div class="journey-header">
+                    <h2>Journey Details</h2>
+                </div>
+    
+                <div class="flight-details">
+                    <div class="flight-item">
+                        <div class="flight-segment">
+                            <div class="flight-info">
+                                <div class="airline-info">
+                                    <img src="airline-logo.png" alt="Airline Logo">
+                                    <p><strong>6E-335</strong> Economy</p>
+                                    <p>O-DOTP</p>
+                                </div>
+                                <div class="departure-info">
+                                    <p><strong>TRV, Trivandrum</strong></p>
+                                    <p>Sep 23, 2024 22:20</p>
+                                    <p>Terminal 1</p>
+                                </div>
+                                <div class="duration">
+                                    <p>1Hrs 35Mins</p>
+                                </div>
+                                <div class="arrival-info">
+                                    <p><strong>HYD, Hyderabad</strong></p>
+                                    <p>Sep 23, 2024 23:55</p>
+                                </div>
+                                <div class="fare-rule">
+                                    <a href="#">Fare Rule</a>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="baggage-info">
+                            <a href="#">30KG Check-in Baggage</a>
+                        </div>
+    
+                        <div class="layover-time">
+                            <p>Layover Time: 8Hrs 30Mins</p>
+                        </div>
+    
+                        <div class="flight-segment">
+                            <div class="flight-info">
+                                <div class="airline-info">
+                                    <img src="airline-logo.png" alt="Airline Logo">
+                                    <p><strong>6E-1465</strong> Economy</p>
+                                    <p>R-RTINT</p>
+                                </div>
+                                <div class="departure-info">
+                                    <p><strong>HYD, Hyderabad</strong></p>
+                                    <p>Sep 24, 2024 08:25</p>
+                                </div>
+                                <div class="duration">
+                                    <p>3Hrs 30Mins</p>
+                                </div>
+                                <div class="arrival-info">
+                                    <p><strong>DXB, Dubai</strong></p>
+                                    <p>Sep 24, 2024 10:25</p>
+                                    <p>Terminal 1</p>
+                                </div>
+                                <div class="fare-rule">
+                                    <a href="#">Fare Rule</a>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="baggage-info">
+                            <a href="#">30KG Check-in Baggage</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-header" style="margin-top: 20px;">
+                    <h2>Contact Details</h2>
+                </div>
+                <div class="contact-details">
+                    <div class="input-group">
+                        <label for="country-code">Country Code</label>
+                        <input type="text" id="country-code" value="+91India">
+                    </div>
+                    <div class="input-group">
+                        <label for="mobile">Mobile</label>
+                        <input type="text" id="mobile">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+    
+                </div>
+    
+                <div class="passenger-header">
+                    <h2>Passenger Details</h2>
+                    <button class="action-btn">Get PAX</button>
+                    <button class="action-btn">Show Nameformat</button>
+                </div>
+    
+                <div class="passenger-info">
+                    <div class="adult-details">
+                        <label>Adult Details</label>
+                        <div class="input-group">
+                            <select>
+                                <option>Adult 1 Title</option>
+                                <option>Mr.</option>
+                                <option>Mrs.</option>
+                            </select>
+                            <input type="text" placeholder="FirstName (Given name)">
+                            <input type="text" placeholder="LastName (Surname)">
+                            <select>
+                                <option>Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="actions">
+                        <button class="add-btn">Add SSR</button>
+                        <button class="add-btn">Add Seat</button>
+                    </div>
+    
+                    <div class="gst-details">
+                        <a href="#">I want to provide GST details</a>
+                        <label><input type="checkbox"> Fill Retailer GST</label>
+                    </div>
+                </div>
+                
+                <div class="journey-header" style="margin-top: 20px;">
+                    <h2>Payment Details</h2>
+                </div>
+    
+                <div class="payment-details-container">
+                  
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="payment-info">
+                            <p class="amount">You are Paying <strong>₹16,993.00</strong></p>
+        
+                            
+                        </div>
+                        <div style="display: flex; flex-direction: column; flex: .6;"> 
+                            <div class="payment-method">
+                                
+                                <select>
+                                    <option>RETAILER REMITTANCE</option>
+                                    <option>PAYMENT GATEWAY</option>
+                                </select>
+                            </div>
+                            <div class="payment-actions">
+                                <button class="payment-btn hold">Hold</button>
+                                <button class="payment-btn back">Back</button>
+                                <button class="payment-btn book">Book</button>
+                            </div>
+                        </div>
+                        
+        
+                    </div>
+                </div>
+    
+    
+    
+            </div>
+            <div style="flex: .3; padding: 10px;">
+                <span style="display: flex;justify-content: end; padding: 10px;"> 14 Mins 56 Seconnds left... </span>
+                <div class="journey-header">
+                    <h4>Fare Details - 1 Adult | 0 Child | 0 Infant</h4>
+                </div>
+                <div class="total-cost">
+                    <p>Adult (₹16,993 x 1)</p>
+                    <p class="cost">₹16,993.00</p>
+                </div>
+                <div class="fare-details"></div>
+                <div class="ticket-cost">
+                    <p>Ticket Cost</p>
+                    <p class="cost">₹16,993.00</p>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
+		
+
+
+		<!--flight list-->
+
+		
+	</div>
+
+	<!-- Repeat this block for more flights -->
+
+
+
+    
+
+
+
+
+
+	<input type="checkbox" id="check" />
+
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+
+	</label>
+
+	<div class="sidebar">
+		<!-- <header>My App</header> -->
+		<ul>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-home"></i></div>
+					<div class="menuLabelSize">Home</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-plane"></i></div>
+					<div class="menuLabelSize">Air-lines</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-train"></i></div>
+					<div>Train</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-bus"></i></div>
+					<div>Train</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-bed"></i></div>
+					<div>Hotels</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-user-shield"></i></div>
+					<div>Insurance</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="iconSize"><i class="fas fa-handshake"></i></div>
+					<div>Meet&Greet</div>
+				</a>
+			</li>
+	</div>
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="home.js"></script>
+
+</html>
